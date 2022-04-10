@@ -18,7 +18,7 @@
         console.log('Truck # ' + this.truckId + ' hsa pending orders: ');
         customerIdArray.forEach(function(id) {
             console.log(this.db.get(id))
-        }.bind(this))
+        }.this)
     }
 
     App.Truck = Truck;
