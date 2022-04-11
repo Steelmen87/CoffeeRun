@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>coffeeRun</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="container">
@@ -44,6 +45,12 @@
                             Grande
                         </label>
                     </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="size" value="coffee-zilla">
+                            Coffee - zilla
+                        </label>
+                    </div>
                     <div class="form-group">
                         <label for="flavorShot">Flafor Shot</label>
                         <select name="flavor" class="form-control" id="flavorShot">
@@ -55,7 +62,8 @@
                     </div>
                     <div class="form-group">
                         <label for="strengthLevel">Caffein Rating</label>
-                        <input type="range" name="strength" id="strengthLevel" value="30">
+                        <div class="valueRange">30</div>
+                        <input type="range" name="strength" min="0" id="strengthLevel" value="30">
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                     <button type="reset" class="btn btn-default">Reset</button>
