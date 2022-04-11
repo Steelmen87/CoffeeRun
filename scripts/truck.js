@@ -1,5 +1,6 @@
 (function(window) {
     var App = window.App || {};
+    var $ = window.jQuery;
 
     function Truck(truckId, db) {
         this.truckId = truckId;
