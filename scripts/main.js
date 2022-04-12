@@ -12,7 +12,7 @@
     var elem = document.querySelector('input[type="range"]');
     var rangeValue = function() {
         var newValue = elem.value;
-        console.log(newValue)
+        /* console.log(newValue) */
         var target = document.querySelector('.valueRange');
         target.innerHTML = newValue;
     }
