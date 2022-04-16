@@ -11,7 +11,7 @@
     var FormHandler = App.FormHandler;
     var CheckList = App.CheckList;
     var remoteDS = new RemoteDataStore(SERVER_URL);
-    var myTruck = new Truck('ncc-1701', remoteDS);
+    var myTruck = new Truck('ncc-1701', new DataStore());
 
     var elem = document.querySelector('input[type="range"]');
     var rangeValue = function() {

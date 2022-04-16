@@ -1,4 +1,5 @@
 (function(window) {
+    'use strict';
     var App = window.App || {};
     var $ = window.jQuery;
 
@@ -9,10 +10,15 @@
         this.serverUrl = url;
     }
     RemoteDataStore.prototype.add = function(key, val) {
-        fetch(this.serverUrl, val);
-
-
+        $.post(this.serverUrl, val, function(serverResponse) {
+            console.log(serverResponse);
+        });
     };
+    /* RemoteDataStore.prototype.add = function(key, val) {
+        $.post(this.serverUrl, val, function(serverResponse) {
+            console.log(JSON.stringify(serverResponse));
+        }).fail(function() { alert('OOPpps') });
+    }; */
     RemoteDataStore.prototype.getAll = function(cb) {
         // Здесь будет находиться код
         $.get(this.serverUrl, function(serverResponse) {
